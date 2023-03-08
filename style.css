@@ -8,7 +8,7 @@
      height: 100%;
      margin: 0px;
      padding: 0px;
-     overflow-x: hidden;
+
      overflow: hidden;
  }
 
@@ -75,7 +75,8 @@
      background-color: white;
      width: 100%;
      padding: 10px;
-     height: 17rem;
+     padding-left: 2rem;
+     padding-bottom: 3rem;
      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
  }
 
@@ -87,12 +88,13 @@
 
  form {
      display: flex;
-     flex-direction: column;
-     flex-wrap: nowrap;
+     flex-wrap: wrap;
+     gap: 1.5rem;
  }
 
  form div {
      display: flex;
+     flex-direction: column;
      justify-content: baseline;
  }
 
@@ -123,7 +125,7 @@
      width: 13rem;
  }
 
- inputinvalid {
+ passwordinvalid {
      border: 2px solid #ff0000;
      margin-bottom: 15px;
      padding: 5px;
@@ -146,7 +148,7 @@
      height: 3rem;
      font-size: 1em;
      font-weight: 700;
-     margin-left: 1rem;
+     margin-left: 2rem;
      margin-top: 1.5rem;
      border-radius: 10px;
      background-color: rgb(255, 138, 71);
@@ -167,5 +169,51 @@
  }
 
  .lower {
-     margin-left: 1rem;
+     margin-left: 2rem;
+     margin-top: 2rem;
+ }
+
+ @media screen and (max-width: 850px) {
+
+     body {
+         flex-direction: column;
+         align-items: normal;
+     }
+
+     .left-container {
+         width: 100vw;
+         flex: 0;
+         height: 20rem;
+     }
+
+     .right-container {
+         justify-content: flex-start;
+     }
+
+     .top-section p:nth-child(2) {
+         text-align: center;
+     }
+
+     .form-section h1 {
+         text-align: center;
+     }
+
+     .form-section {
+         padding-left: 0;
+     }
+
+     form {
+         justify-content: center;
+     }
+
+     .lower-section {
+
+         margin-left: 0;
+         width: 100vw;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         flex-wrap: nowrap;
+     }
+
  }
